@@ -454,7 +454,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 976937774}
-  - component: {fileID: 976937773}
   m_Layer: 0
   m_Name: TestDelaunay
   m_TagString: Untagged
@@ -462,31 +461,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &976937773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976937772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc4e8b2240c6fd04e845372b5f0b48b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points:
-  - {x: 1, y: 2}
-  - {x: 0, y: 5.5}
-  - {x: 2, y: 5}
-  - {x: 3, y: 8}
-  - {x: 4, y: 3}
-  - {x: 4, y: 3}
-  - {x: 4, y: 1}
-  - {x: 3, y: 4.5}
-  - {x: 1.5, y: 6.5}
-  - {x: 1, y: 8}
-  - {x: 4, y: 8}
-  - {x: 4, y: 1}
 --- !u!4 &976937774
 Transform:
   m_ObjectHideFlags: 0

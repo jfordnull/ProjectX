@@ -38,7 +38,6 @@ public class DelaunayTriangulation : MonoBehaviour
             Debug.DrawLine(triangle.e1.p1, triangle.e1.p2, Color.green, 100f);
             Debug.DrawLine(triangle.e2.p1, triangle.e2.p2, Color.green, 100f);
             Debug.DrawLine(triangle.e3.p1, triangle.e3.p2, Color.green, 100f);
-            Debug.Log(triangle.e1);
         }
         foreach (Vector2 point in points)
         {
@@ -80,7 +79,6 @@ public class DelaunayTriangulation : MonoBehaviour
         //p3 is to the right and below midpoint
         //multiplying by factor of 20 just ensures triangle covers all points
         //accounts for potential fluctuations in point distribution, maybe unnecessary
-        Debug.Log(p1);
 
         triangles.Add(new Triangle(p1, p2, p3));
 
@@ -116,7 +114,6 @@ public class DelaunayTriangulation : MonoBehaviour
         triangles.RemoveAll(triangle => triangle.ContainsVertex(p1) ||
                                         triangle.ContainsVertex(p2) ||
                                         triangle.ContainsVertex(p3));
-
         return triangles;
     }
 
@@ -128,6 +125,7 @@ public class DelaunayTriangulation : MonoBehaviour
         HashSet<Edge> edgeSet = new HashSet<Edge>(edges);
         return new List<Edge>(edgeSet);
     }
+
 }
 
 public class Triangle
@@ -182,7 +180,8 @@ public class Triangle
 
 public class Edge
 {
-    public Vector2 p1, p2;
+    public Vector2 p1;
+    public Vector2 p2;
 
     public Edge(Vector2 point1, Vector2 point2)
     {
