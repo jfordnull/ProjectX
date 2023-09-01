@@ -1,0 +1,1 @@
+The Material is added to a Full Screen Pass Renderer on the URP Render settings (Right now just the High Fidelity profile, but we'd add it to whatever profiles we built with)
