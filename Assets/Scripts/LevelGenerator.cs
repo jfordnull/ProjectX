@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] Vector2Int levelGridSize, maxRoomSize;
     [SerializeField] int roomCount, randomSeed = 0;
-    [SerializeField] GameObject floorTile;
+    [SerializeField] GameObject floorTile, wallTile;
     [SerializeField] Material floorMaterial, wallMaterial;
     enum CellType { None, Room, Hallway }
 
@@ -76,15 +76,52 @@ public class LevelGenerator : MonoBehaviour
                 DrawRoom(newRoom.bounds.position, newRoom.bounds.size);
                 Debug.Log("Added room" + rooms.Count + newRoom.bounds.position + "size: " + newRoom.bounds.size);
             }
+
+            if (flag)
+            {
+                i--;
+            }
         }
     }
+
+    /*--------------------------------------------------*/
 
     void DrawRoom(Vector2Int location, Vector2Int size)
     {
         for(int i = 0; i < size.x; i++)
         {
+            /*              -------------              */
+            /*              -           -              */
+            /*              -           -              */
+            /*              -           -              */
+            /*              *************              */
+            /*                                         */
+            PlaceWallTile(location + new Vector2Int(i, 0));
+            /*              *************              */
+            /*              -           -              */
+            /*              -           -              */
+            /*              -           -              */
+            /*              -------------              */
+            /*                                         */
+            PlaceWallTile(location + new Vector2Int(i, size.y));
+
             for (int j = 0; j < size.y; j++)
             {
+                /*              *------------              */
+                /*              *           -              */
+                /*              *           -              */
+                /*              *           -              */
+                /*              *------------              */
+                /*                                         */
+                PlaceWallTile(location + new Vector2Int(0, j));
+                /*              ------------*              */
+                /*              -           *              */
+                /*              -           *              */
+                /*              -           *              */
+                /*              ------------*              */
+                /*                                         */
+                PlaceWallTile(location + new Vector2Int(size.x, j));
+
                 PlaceFloorTile(location + new Vector2Int(i, j));
             }
         }
@@ -95,16 +132,16 @@ public class LevelGenerator : MonoBehaviour
 
     }
 
+    /*--------------------------------------------------*/
+
     void PlaceFloorTile(Vector2Int location)
     {
         GameObject floor = Instantiate(floorTile, new Vector3(location.x, 0, location.y), Quaternion.identity);
     }
 
-    //void DrawCube(Vector2Int location, Vector2Int size, Material material)
-    //{
-    //    GameObject newCube = Instantiate(cubePrefab, new Vector3(location.x, 0, location.y),
-    //        Quaternion.identity);
-    //    newCube.GetComponent<Transform>().localScale = new Vector3(size.x, 1, size.y);
-    //    newCube.GetComponent<MeshRenderer>().material = material;
-    //}
+    void PlaceWallTile(Vector2Int location)
+    {
+        GameObject wall = Instantiate(wallTile, new Vector3(location.x, 0, location.y), Quaternion.identity);
+        GameObject wall2 = Instantiate(wallTile, new Vector3(location.x, 1, location.y), Quaternion.identity);
+    }
 }
