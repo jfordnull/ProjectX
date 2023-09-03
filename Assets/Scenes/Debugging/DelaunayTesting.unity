@@ -463,7 +463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1724755288
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -580,14 +580,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d597ae48d66f1469e57d7eabc2cfa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGridSize: {x: 20, y: 20}
-  maxRoomSize: {x: 7, y: 7}
-  roomCount: 70
+  levelGridSize: {x: 40, y: 40}
+  maxRoomSize: {x: 10, y: 10}
+  roomCount: 30
   randomSeed: 11
-  cubePrefab: {fileID: 8792464024340269504, guid: e42c3ab6ae759e841bfc172b2de8966f,
+  floorTile: {fileID: 919132149155446097, guid: 5584fb397f9997840823bdfea3599627,
     type: 3}
-  roomMaterial: {fileID: 2100000, guid: e8870c98999482442abc1be7308ff960, type: 2}
-  hallwayMaterial: {fileID: 2100000, guid: ce59231eabbdad14baab47d187fa7406, type: 2}
+  wallTile: {fileID: 8792464024340269504, guid: e42c3ab6ae759e841bfc172b2de8966f,
+    type: 3}
+  floorMaterial: {fileID: 0}
+  wallMaterial: {fileID: 0}
 --- !u!4 &1824633448
 Transform:
   m_ObjectHideFlags: 0
