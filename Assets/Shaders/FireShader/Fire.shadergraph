@@ -2211,8 +2211,8 @@
     "m_ObjectId": "34244f2bf63c452f9fb2bdbffeed976d",
     "m_Title": "Sample Texture",
     "m_Position": {
-        "x": 1882.0,
-        "y": -450.0
+        "x": 1973.0,
+        "y": -448.0000305175781
     }
 }
 
@@ -4720,10 +4720,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1907.0,
-            "y": -256.9999694824219,
+            "x": 1998.0,
+            "y": -231.0,
             "width": 145.0,
-            "height": 137.99996948242188
+            "height": 138.0000457763672
         }
     },
     "m_Slots": [
@@ -5049,10 +5049,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 2106.0,
-            "y": -415.0000305175781,
+            "x": 2197.0,
+            "y": -389.0000305175781,
             "width": 208.0,
-            "height": 435.0000305175781
+            "height": 435.00006103515627
         }
     },
     "m_Slots": [

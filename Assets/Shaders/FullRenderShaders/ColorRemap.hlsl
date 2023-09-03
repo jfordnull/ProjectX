@@ -12,6 +12,12 @@ float3 Col10, out float3 Out)
         //Col = half3(211. / H, 216. / H, 217. / H);
         Col = Col1;
     }
+
+    else if (Col.r > 0.90)
+    {
+        //Col = half3(211. / H, 216. / H, 217. / H);
+        Col = Col1;
+    }
     else if (Col.r <= 0.90 && Col.r > 0.80)
     {
         //Col = half3(197. / H, 210. / H, 206. / H);
