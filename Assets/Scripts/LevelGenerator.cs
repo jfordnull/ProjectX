@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] Vector2Int levelGridSize, maxRoomSize;
     [SerializeField] int roomCount, randomSeed = 0;
-    [SerializeField] GameObject floorTile, wallTile;
+    [SerializeField] GameObject floorTile, wallLeft, wallRight, wallUp, wallDown;
     [SerializeField] Material floorMaterial, wallMaterial;
     enum CellType { None, Room, Hallway }
 
@@ -96,14 +96,14 @@ public class LevelGenerator : MonoBehaviour
             /*              -           -              */
             /*              *************              */
             /*                                         */
-            PlaceWallTile(location + new Vector2Int(i, 0));
+            PlaceWallTile(location + new Vector2Int(i, 0), wallDown);
             /*              *************              */
             /*              -           -              */
             /*              -           -              */
             /*              -           -              */
             /*              -------------              */
             /*                                         */
-            PlaceWallTile(location + new Vector2Int(i, size.y));
+            PlaceWallTile(location + new Vector2Int(i, size.y), wallUp);
 
             for (int j = 0; j < size.y; j++)
             {
@@ -113,14 +113,14 @@ public class LevelGenerator : MonoBehaviour
                 /*              *           -              */
                 /*              *------------              */
                 /*                                         */
-                PlaceWallTile(location + new Vector2Int(0, j));
+                PlaceWallTile(location + new Vector2Int(0, j), wallLeft);
                 /*              ------------*              */
                 /*              -           *              */
                 /*              -           *              */
                 /*              -           *              */
                 /*              ------------*              */
                 /*                                         */
-                PlaceWallTile(location + new Vector2Int(size.x, j));
+                PlaceWallTile(location + new Vector2Int(size.x, j), wallRight);
 
                 PlaceFloorTile(location + new Vector2Int(i, j));
             }
@@ -139,9 +139,9 @@ public class LevelGenerator : MonoBehaviour
         GameObject floor = Instantiate(floorTile, new Vector3(location.x, 0, location.y), Quaternion.identity);
     }
 
-    void PlaceWallTile(Vector2Int location)
+    void PlaceWallTile(Vector2Int location, GameObject wall)
     {
-        GameObject wall = Instantiate(wallTile, new Vector3(location.x, 0, location.y), Quaternion.identity);
-        GameObject wall2 = Instantiate(wallTile, new Vector3(location.x, 1, location.y), Quaternion.identity);
+        GameObject wall1 = Instantiate(wall, new Vector3(location.x, 0, location.y), Quaternion.identity);
+        GameObject wall2 = Instantiate(wall, new Vector3(location.x, 1, location.y), Quaternion.identity);
     }
 }

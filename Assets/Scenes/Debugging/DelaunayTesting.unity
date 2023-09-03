@@ -569,7 +569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1782936483
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -692,10 +692,13 @@ MonoBehaviour:
   randomSeed: 11
   floorTile: {fileID: 919132149155446097, guid: 5584fb397f9997840823bdfea3599627,
     type: 3}
-  wallTile: {fileID: 8792464024340269504, guid: e42c3ab6ae759e841bfc172b2de8966f,
+  wallLeft: {fileID: 919132149155446097, guid: e989089a1f0df884581532aa43815029, type: 3}
+  wallRight: {fileID: 919132149155446097, guid: 2c61d7f622121404ebce6467458c418b,
     type: 3}
-  floorMaterial: {fileID: 0}
-  wallMaterial: {fileID: 0}
+  wallUp: {fileID: 919132149155446097, guid: 4ca0063ede1ff2145a8de8cdc62876de, type: 3}
+  wallDown: {fileID: 919132149155446097, guid: ee6649bea3dff9f4ca45cff5803adcd5, type: 3}
+  floorMaterial: {fileID: 2100000, guid: a77908e5d2d819040b4686411033ea73, type: 2}
+  wallMaterial: {fileID: 2100000, guid: a77908e5d2d819040b4686411033ea73, type: 2}
 --- !u!4 &1824633448
 Transform:
   m_ObjectHideFlags: 0
