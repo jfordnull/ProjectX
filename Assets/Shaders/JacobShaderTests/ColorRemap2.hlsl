@@ -5,13 +5,14 @@
 
 void ColorRemap_float(float3 Col, out float3 Out)
 {
-    //if (Col.r > .99)
-    //{
-    //    Out = half3(228. / H, 50. / H, 84. / H);
-    //}
-    if (Col.r > 0.80)
+    if (Col.r > .99)
     {
-        Col = half3(212. / H, 226. / H, 204. / H);
+        //Col = half3(228. / H, 50. / H, 84. / H);
+    }
+    else if (Col.r > 0.80)
+    {
+        //Col = half3(212. / H, 226. / H, 204. / H);
+        Col = float3(.83, .87, .8);
     }
     else if (Col.r <= 0.80 && Col.r > 0.60)
     {
