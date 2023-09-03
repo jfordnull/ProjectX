@@ -686,13 +686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d597ae48d66f1469e57d7eabc2cfa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGridSize: {x: 40, y: 40}
-  maxRoomSize: {x: 10, y: 10}
-  roomCount: 30
-  randomSeed: 11
+  levelGridSize: {x: 30, y: 30}
+  maxRoomSize: {x: 5, y: 5}
+  roomCount: 70
+  randomSeed: 2
   floorTile: {fileID: 919132149155446097, guid: 5584fb397f9997840823bdfea3599627,
-    type: 3}
-  wallTile: {fileID: 8792464024340269504, guid: e42c3ab6ae759e841bfc172b2de8966f,
     type: 3}
   floorMaterial: {fileID: 0}
   wallMaterial: {fileID: 0}
