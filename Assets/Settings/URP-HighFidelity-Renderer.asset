@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gameboy
   m_EditorClassIdentifier: 
   m_Active: 1
-  passMaterial: {fileID: 2100000, guid: a77908e5d2d819040b4686411033ea73, type: 2}
+  passMaterial: {fileID: 2100000, guid: af8e51fb03acefa41bb8a0ff52b4b999, type: 2}
   injectionPoint: 450
   requirements: 4
   passIndex: 0
